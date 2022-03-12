@@ -1,0 +1,16 @@
+<ChangeMPlanFilmPlannedInventory>
+      <Data>
+        <CommInMpl>
+          <ID>3342386</ID>
+          <Inventory>10</Inventory>
+        </CommInMpl>
+        <CommInMpl>
+          <ID>3342386</ID>
+          <Inventory>20</Inventory>
+        </CommInMpl>
+        <CommInMpl>
+          <ID>93342386</ID>
+          <Inventory>10</Inventory>
+        </CommInMpl>
+      </Data>
+    </ChangeMPlanFilmPlannedInventory>

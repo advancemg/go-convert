@@ -1,0 +1,74 @@
+<responseProgramBreaksV2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BreakList>
+    <b BlockID="117952185" VM="180" VR="0">
+      <IssID>72950041</IssID>
+      <CnlID>1021210</CnlID>
+      <ProgID>674380</ProgID>
+      <RCID>1021210</RCID>
+      <RPID xsi:nil="true"/>
+      <BlockDate>2019-12-10</BlockDate>
+      <IssTime>28620</IssTime>
+      <IssDuration>180</IssDuration>
+      <BlockTime>28620</BlockTime>
+      <BlockNumber>1</BlockNumber>
+      <PrgName>Рекламный блок</PrgName>
+      <CnlName>Москва 24</CnlName>
+      <ForecastRateBase xsi:nil="true"/>
+      <FactRateBase xsi:nil="true"/>
+      <IsPrime>0</IsPrime>
+      <DLDate>2019-12-05T13:00:00</DLDate>
+      <TNSBlockFactID xsi:nil="true"/>
+      <ProID>436837</ProID>
+      <ProOriginalPTR xsi:nil="true"/>
+      <BlockDistr>0</BlockDistr>
+      <SptOptions>8</SptOptions>
+      <TNSBlockFactTime xsi:nil="true"/>
+      <TNSBlockFactDur xsi:nil="true"/>
+      <Pro2>0</Pro2>
+      <BlkAdvertTypePTR>37</BlkAdvertTypePTR>
+      <WeekDay>2</WeekDay>
+      <RateAll xsi:nil="true"/>
+      <PrgBegTimeL>28320</PrgBegTimeL>
+      <PrgEndMonthL>28292</PrgEndMonthL>
+      <PrgBegMonthL>28267</PrgBegMonthL>
+      <PrgNameShort>Рекламный блок</PrgNameShort>
+      <TgrID xsi:nil="true"/>
+      <TgrName/>
+      <BlkAuc>0</BlkAuc>
+      <AucRate xsi:nil="true"/>
+      <NoRating>1</NoRating>
+      <AvailableAuctionVolume xsi:nil="true"/>
+      <AuctionStepPrice xsi:nil="true"/>
+      <IsLocal>1</IsLocal>
+      <DLTrDate>1900-01-01T00:00:00</DLTrDate>
+      <RootRCID>1021210</RootRCID>
+      <RootRPID>674380</RootRPID>
+      <IsSpecialProject>0</IsSpecialProject>
+      <Booked RankID="2" VM="155" VR="0"/>
+      <Booked RankID="3" VM="10" VR="0"/>
+    </b>
+    </BreakList>
+    <ProMaster>
+        <p>
+            <ProID>215301</ProID>
+            <PropName>Тип</PropName>
+            <PropValue>Программа</PropValue>
+        </p>
+    </ProMaster>
+    <BlockForecast>
+        <B>
+            <BlockID>1</BlockID>
+            <tgrID>1</tgrID>
+            <Forecast>0.2</Forecast>
+            <ForecastQuality>good</ForecastQuality>
+            <InternetForecast xsi:nil="true"/>
+			<Fact xsi:nil="true"></Fact>
+        </B>
+    </BlockForecast>
+    <BlockForecastTgr>
+        <Tgr>
+            <ID>928</ID>
+            <Name>Название ЦА</Name>
+        </Tgr>
+    </BlockForecastTgr>
+</responseProgramBreaksV2>

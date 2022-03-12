@@ -1,0 +1,34 @@
+<responseBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <BudgetList>
+        <m>
+            <AgrID>17983</AgrID>
+            <AgrName>Название договора</AgrName>
+            <AdtID>17845</AdtID>
+            <AdtName>Название рекламодателя</AdtName>
+            <CmpName>Название компании</CmpName>
+            <TP>Название точки родаж</TP>
+            <Month>201801</Month>
+            <CnlID>1018574</CnlID>
+            <CnlName>СТС</CnlName>
+            <FixPercent>0.0</FixPercent>
+            <FloatPercent>0.0</FloatPercent>
+            <FixPercentPrime>0.0</FixPercentPrime>
+            <FloatPercentPrime>0.0</FloatPercentPrime>
+            <CoordCost>0.0</CoordCost>
+            <Cost>0.0</Cost>
+            <GRP>0.0</GRP>
+            <GRPFix>0.0</GRPFix>
+            <Budget>0.0</Budget>
+            <GRPWithoutKF>0.0</GRPWithoutKF>
+            <DealChannelStatus>1</DealChannelStatus>
+            <InventoryUnitDuration>30</InventoryUnitDuration>
+            <Quality>
+                <Item>
+                    <RankID>1</RankID>
+                    <Percent>0.55</Percent>
+                    <PercentPrime>0.6</PercentPrime>
+                </Item>
+            </Quality>
+        </m>
+    </BudgetList>
+</responseBudget>

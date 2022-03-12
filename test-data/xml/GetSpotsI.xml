@@ -1,0 +1,13 @@
+<GetSpots>
+    <SellingDirectionID>21</SellingDirectionID>
+    <StartDate>20161010</StartDate>
+    <EndDate>20161016</EndDate>
+    <InclOrdBlocks>1</InclOrdBlocks>
+    <ChannelList>
+        <Cnl>2</Cnl>
+        <Main>1</Main>
+    </ChannelList>
+    <AdtList>
+        <AdtID>1</AdtID>
+    </AdtList>
+</GetSpots>

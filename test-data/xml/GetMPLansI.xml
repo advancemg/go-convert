@@ -1,0 +1,12 @@
+<GetMPlans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <SellingDirectionID>21</SellingDirectionID>
+    <StartMonth>201707</StartMonth>
+    <EndMonth>201707</EndMonth>
+    <AdtList>
+        <AdtID>1</AdtID>
+    </AdtList>
+    <ChannelList>
+        <Cnl>1018578</Cnl>
+    </ChannelList>
+    <IncludeEmpty>true</IncludeEmpty>
+</GetMPlans>

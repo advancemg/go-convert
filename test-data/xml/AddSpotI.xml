@@ -1,0 +1,7 @@
+<AddSpot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <BlockID>1</BlockID>
+    <FilmID>1238114</FilmID>
+    <Position xsi:nil="true"></Position>
+    <FixedPosition>true</FixedPosition>
+    <AuctionBidValue xsi:nil="true"></AuctionBidValue>
+</AddSpot>

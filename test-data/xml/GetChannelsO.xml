@@ -1,0 +1,20 @@
+<responseGetChannels>
+    <Channel>
+        <ID>1</ID>
+        <ShortName>Канал Дисней</ShortName>
+        <IsDisabled>1</IsDisabled>
+        <MainChnl>1</MainChnl>
+        <cnlCentralID>1</cnlCentralID>
+        <bcpCentralID>81</bcpCentralID>
+        <bcpName>Москва</bcpName>
+    </Channel>
+    <Channel>
+        <ID>2</ID>
+        <ShortName>Канал Пятница</ShortName>
+        <IsDisabled>0</IsDisabled>
+        <MainChnl>2</MainChnl>
+        <cnlCentralID>0</cnlCentralID>
+        <bcpCentralID>81</bcpCentralID>
+        <bcpName>Москва</bcpName>
+    </Channel>
+</responseGetChannels>

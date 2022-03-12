@@ -1,0 +1,9 @@
+<responseAddSpot>
+    <b>
+        <Result>1</Result>
+        <AddSpotStart>Jan  1 1900 12:00AM</AddSpotStart>
+        <newSptID>1</newSptID>
+        <Position xsi:nil="true"/>
+        <ErrorMessage xsi:nil="true" />
+    </b>
+</responseAddSpot>

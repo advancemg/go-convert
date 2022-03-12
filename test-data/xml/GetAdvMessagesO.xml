@@ -1,0 +1,44 @@
+<GetAdvMessagesResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <AdvertisingMessagesData>
+        <Row>
+            <AdtID>700061957</AdtID>
+            <AdtName>Название рекламодателя</AdtName>
+            <FilmID>861555</FilmID>
+            <FilmName>Название ролика</FilmName>
+            <FilmVersion/>
+            <FilmDur>20</FilmDur>
+            <BrandID>44362</BrandID>
+            <BrandName>Название ТБ</BrandName>
+            <ProdClassID>703</ProdClassID>
+            <ffoaAllocated>1</ffoaAllocated>
+            <ffoaLawAcc>0</ffoaLawAcc>
+            <DoubleAdvertiser>false</DoubleAdvertiser>
+            <HasSpots>false</HasSpots>
+            <AspectID>203</AspectID>
+            <AspectName>4x3</AspectName>
+            <HasBroadcastMaterials>true</HasBroadcastMaterials>
+            <HasPreviewMaterials>true</HasPreviewMaterials>
+            <GroupID>888064</GroupID>
+        </Row>
+        <Row>
+            <AdtID>700072339</AdtID>
+            <AdtName>Название рекламодателя</AdtName>
+            <FilmID>861557</FilmID>
+            <FilmName>Название ролика</FilmName>
+            <FilmVersion>Версия ролика</FilmVersion>
+            <FilmDur>10</FilmDur>
+            <BrandID>68436</BrandID>
+            <BrandName>Название ТБ</BrandName>
+            <ProdClassID>426</ProdClassID>
+            <ffoaAllocated>1</ffoaAllocated>
+            <ffoaLawAcc>0</ffoaLawAcc>
+            <DoubleAdvertiser>false</DoubleAdvertiser>
+            <HasSpots>false</HasSpots>
+            <AspectID>203</AspectID>
+            <AspectName>4x3</AspectName>
+            <HasBroadcastMaterials>true</HasBroadcastMaterials>
+            <HasPreviewMaterials>true</HasPreviewMaterials>
+            <GroupID>888064</GroupID>
+        </Row>
+    </AdvertisingMessagesData>
+</GetAdvMessagesResult>

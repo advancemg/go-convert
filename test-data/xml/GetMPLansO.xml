@@ -1,0 +1,109 @@
+<responseMPlans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <MPlansList>
+        <m>
+            <AgrID>12358</AgrID>
+            <AgrName>Название сделки</AgrName>
+            <AdtID>700073097</AdtID>
+            <AdtName>Название рекламодателя</AdtName>
+            <ContractBeg>20170101</ContractBeg>
+            <ContractEnd>20171231</ContractEnd>
+            <OrdID>80120</OrdID>
+            <OrdName>Название Заказа</OrdName>
+            <AllocationType>0</AllocationType>
+            <TgrID>194</TgrID>
+            <TgrName>все 18-44</TgrName>
+            <MplID>13425963</MplID>
+            <MplName>Название медиаплана </MplName>
+            <MplCnlID>1018578</MplCnlID>
+            <MplMonth>20170701</MplMonth>
+            <MplState>1</MplState>
+            <OrdFrID>848971</OrdFrID>
+            <FilmID>655571</FilmID>
+            <FilmName>Название Ролика</FilmName>
+            <FilmVersion>Версия Ролика</FilmVersion>
+            <FilmDur>20</FilmDur>
+            <DateFrom>20170701</DateFrom>
+            <DateTo>20170709</DateTo>
+            <GRP>2.2</GRP>
+            <BrandID>52091</BrandID>
+            <BrandName>Название Товарного бренда</BrandName>
+            <CommInMplID>1236308</CommInMplID>
+            <CPPprime>100</CPPprime>
+            <CPPoffprime>100</CPPoffprime>
+            <HasReserve>1</HasReserve>
+            <AdvID>700073097</AdvID>
+            <TPName/>
+            <FbrName>Название Финансового бренда</FbrName>
+            <PBACond>Условия ПБА</PBACond>
+            <Multiple xsi:nil="true"/>
+            <ordManager>ФИО</ordManager>
+            <ordBegDate>20170501</ordBegDate>
+            <ordEndDate>20170731</ordEndDate>
+            <DublSpot>0</DublSpot>
+            <ProdClassID>615</ProdClassID>
+            <AmountPlan>100.1</AmountPlan>
+            <AmountFact>100.1</AmountFact>
+            <PBAObjID>9335</PBAObjID>
+            <GrpTotal>2.2</GrpTotal>
+            <GrpPlan>2.2</GrpPlan>
+            <GrpFact>2.2</GrpFact>
+            <GRPShift>0.5</GRPShift>
+            <SumShift>0.5</SumShift>
+            <ffoaLawAcc>1</ffoaLawAcc>
+            <OBDPos>1</OBDPos>
+            <ffoaAllocated>1</ffoaAllocated>
+            <DtpID>0</DtpID>
+            <FixPriceAsFloat>0</FixPriceAsFloat>
+            <OrdIsTriggered>0</OrdIsTriggered>
+            <Discounts>
+                <item>
+                    <DiscountStartDate xsi:nil="true"/>
+                    <DicountEndDate xsi:nil="true"/>
+                    <DiscountTypeName>За позиционирование 30</DiscountTypeName>
+                    <IsManual>false</IsManual>
+                    <DiscountFactor>1.00000000000000</DiscountFactor>
+                    <TypeID>1</TypeID>
+                    <ApplyingTypeID>10</ApplyingTypeID>
+                    <ApplicableToDeals>false</ApplicableToDeals>
+                    <IsSpotPositionDependent>true</IsSpotPositionDependent>
+                    <ValueID>1</ValueID>
+                </item>
+                <item>
+                    <DiscountStartDate>2017-07-01T00:00:00</DiscountStartDate>
+                    <DicountEndDate>2017-07-31T00:00:00</DicountEndDate>
+                    <DiscountTypeName>Сезонная </DiscountTypeName>
+                    <IsDiscountAggregate>false</IsDiscountAggregate>
+                    <AggregationMethodName/>
+                    <IsManual>false</IsManual>
+                    <DiscountFactor>0.80000000000000</DiscountFactor>
+                    <TypeID>10</TypeID>
+                    <ApplyingTypeID>8</ApplyingTypeID>
+                    <ApplicableToDeals>true</ApplicableToDeals>
+                    <IsSpotPositionDependent>false</IsSpotPositionDependent>
+                    <ValueID xsi:nil="true"/>
+                </item>
+            </Discounts>
+            <DealChannelStatus>1</DealChannelStatus>
+            <OrdIsTriggered>0</OrdIsTriggered>
+            <DoubleAdvertiser>true</DoubleAdvertiser>
+            <SplitMessageGroupID xsi:nil="true"/>
+            <GrpTotalPrime>13.2586340243</GrpTotalPrime>
+            <MplCbrID>123</MplCbrID>
+            <MplCbrName>Название Товарного бренда из медиаплана</MplCbrName>
+            <InventoryUnitDuration>30</InventoryUnitDuration>
+            <FilmDurKoef>1.0</FilmDurKoef>
+            <FixPriority xsi:nil="true"/>
+            <RankID>3</RankID>
+            <GroupID>942772</GroupID>
+            <MainOrderID xsi:nil="true"/>
+            <Inventory>0</Inventory>
+            <InventoryUnits>49</InventoryUnits>
+            <PrimeShare>0.65</PrimeShare>
+            <AllocationAllowed>false</AllocationAllowed>
+            <CommInMplPlanInventory>6.6039551918569</CommInMplPlanInventory>
+            <CommInMplPlanBudget>7327.2931171718</CommInMplPlanBudget>
+            <CommInMplPlanPrimeInventory>6.6039551918569</CommInMplPlanPrimeInventory>
+            <CommInMplPlanPrimeBudget>7327.2931171718</CommInMplPlanPrimeBudget>
+        </m>
+    </MPlansList>
+</responseMPlans>

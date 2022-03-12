@@ -1,0 +1,11 @@
+<GetBudgets>
+    <SellingDirectionID>21</SellingDirectionID>
+    <StartMonth>201801</StartMonth>
+    <EndMonth>20180115</EndMonth>
+    <AdvertiserList>
+        <ID>700064621</ID>
+    </AdvertiserList>
+    <ChannelList>
+        <ID>1018574</ID>
+    </ChannelList>
+</GetBudgets>

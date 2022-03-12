@@ -1,0 +1,12 @@
+<responseProgramBreaksV2Light xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BreakList>
+    <b BlockID="117952183" HasAucSpots="false" VM="180" VR="0">
+      <Booked RankID="2" VM="175" VR="0"/>
+    </b>
+    <b BlockID="117952235" HasAucSpots="false" VM="180" VR="0"/>
+    <b BlockID="117952251" HasAucSpots="false" VM="180" VR="0">
+      <Booked RankID="2" VM="125" VR="0"/>
+      <Booked RankID="3" VM="10" VR="0"/>
+    </b>
+  </BreakList>
+</responseProgramBreaksV2Light>
