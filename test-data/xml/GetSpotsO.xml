@@ -1,0 +1,43 @@
+<ResponseSpot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <SpotList>
+        <s>
+            <SpotID>0</SpotID>
+            <BlockID>0</BlockID>
+            <sptChnlPTR>0</sptChnlPTR>
+            <CommInMplID>0</CommInMplID>
+            <Positioning xsi:nil="true" />
+            <TNSSpotsID xsi:nil="true" />
+            <TNSBlockID xsi:nil="true" />
+            <AgrID>0</AgrID>
+            <MplID>0</MplID>
+            <OrdID>0</OrdID>
+            <AtpID>0</AtpID>
+            <DtpID xsi:nil="true" />
+            <TgrID xsi:nil="true" />
+            <SptDateL>1032929</SptDateL>
+            <FloatPriority>0</FloatPriority>
+            <IsHumanBeing>true</IsHumanBeing>
+            <CurrentAuctionBidValue xsi:nil="true" />
+            <Rating>0.768</Rating>
+            <BaseRating>0.768</BaseRating>
+            <SpotOrderNo>1</SpotOrderNo>
+            <SpotBroadcastTime>86063</SpotBroadcastTime>
+            <SpotFactBroadcastTime>86063</SpotFactBroadcastTime>
+            <OTS>230.745</OTS>
+            <AllocationType>0</AllocationType>
+            <FixPriority xsi:nil="true"/>
+            <SpotReserve>1</SpotReserve>
+            <IRating>0</IRating>
+            <IBaseRating>0</IBaseRating>
+            <RankID>3</RankID>
+        </s>
+    </SpotList>
+    <OrdBlocks>
+        <obl>
+            <OrdID>0</OrdID>
+            <BlockID>0</BlockID>
+            <Rate>0.01</Rate>
+            <IRate>0</IRate>
+        </obl>
+    </OrdBlocks>
+</ResponseSpot>

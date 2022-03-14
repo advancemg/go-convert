@@ -1,0 +1,26 @@
+<responseGetDeletedSpotInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Items>
+        <i>
+            <AgrID>0</AgrID>
+            <AgrName>Название сделки</AgrName>
+            <OrdID>484148</OrdID>
+            <OrdName>Название заказа</OrdName>
+            <FilmID>912037</FilmID>
+            <FilmName>Название ролика</FilmName>
+            <FilmVersion>Версия ролика</FilmVersion>
+            <FilmDur>45</FilmDur>
+            <BlockID>180487969</BlockID>
+            <BlockDate>20191103</BlockDate>
+            <BlockTime>32837</BlockTime>
+            <CurrentAuctionBidValue>0</CurrentAuctionBidValue>
+            <SpotID>755086586</SpotID>
+            <Position>-3</Position>
+            <CnlName>Первый</CnlName>
+            <PrgName>Бокс. Бой за титул чемпиона мира</PrgName>
+            <BlockNumber>1</BlockNumber>
+            <DeleteDateTime>2019-12-11T09:29:05</DeleteDateTime>
+            <Reason>1</Reason>
+            <AffiliationType>0</AffiliationType>
+        </i>
+    </Items>
+</responseGetDeletedSpotInfo>

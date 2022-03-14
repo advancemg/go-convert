@@ -1,0 +1,20 @@
+<responseChangeFilm>
+    <b>
+        <Result>1</Result>
+        <ErrorMessage/>
+        <SpotIDs>
+          <ID>12345678</ID>
+          <ID>12345679</ID>
+        </SpotIDs>
+        <SpotData>
+          <Item>
+            <SpotID>210448182</SpotID>
+            <SplitMessageID>2062725</SplitMessageID>
+          </Item>
+          <Item>
+            <SpotID>210448182</SpotID>
+            <SplitMessageID>2062725</SplitMessageID>
+          </Item>
+        </SpotData>
+    </b>
+</responseChangeFilm>

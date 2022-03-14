@@ -1,0 +1,22 @@
+<responseGetCustomersWithAdvertisers>
+    <Advertisers>
+        <item>
+            <ID>1</ID>
+            <Name>SOME ADVERTISER</Name>
+        </item>
+        <item>
+            <ID>2</ID>
+            <Name>ANOTHER ADVERTISER</Name>
+        </item>
+    </Advertisers>
+    <Data>
+        <item>
+            <CustID>21</CustID>
+            <AdvID>1</AdvID>
+        </item>
+        <item>
+            <CustID>21</CustID>
+            <AdvID>2</AdvID>
+        </item>
+    </Data>
+</responseGetCustomersWithAdvertisers>

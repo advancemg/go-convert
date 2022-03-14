@@ -1,0 +1,15 @@
+<GetAdvMessages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CreationDateStart>2019-03-01</CreationDateStart>
+    <CreationDateEnd>2019-03-02</CreationDateEnd>
+    <Advertisers>
+        <ID>1</ID>
+    </Advertisers>
+    <Aspects>
+        <ID>2</ID>
+    </Aspects>
+    <AdvertisingMessageIDs>
+        <ID>1</ID>
+        <ID>2</ID>
+    </AdvertisingMessageIDs>
+    <FillMaterialTags>true</FillMaterialTags>
+</GetAdvMessages>

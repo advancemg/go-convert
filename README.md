@@ -160,8 +160,6 @@ func main() {
     </Advertisers>
     <AdvertisingMessageIDs>
         <ID>1</ID>
-    </AdvertisingMessageIDs>
-    <AdvertisingMessageIDs>
         <ID>2</ID>
     </AdvertisingMessageIDs>
     <Aspects>
@@ -171,6 +169,7 @@ func main() {
     <CreationDateStart>2019-03-01</CreationDateStart>
     <FillMaterialTags>true</FillMaterialTags>
 </GetAdvMessages>
+
 ```
 
 ## Benchmark
@@ -188,7 +187,7 @@ JsonToXml
 
 | Op    | ns/op | B/op  | allocs/op |
 |-------|-------|-------|-----------|
-| 80349 | 12512 | 24800 | 190       |
+| 68661 | 15192 | 18615 | 226       |
 
 ### Contributing
 Feel free to contribute to this project if you want to fix/extend/improve it.
