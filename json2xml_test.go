@@ -2,7 +2,7 @@ package go_convert
 
 import (
 	"bytes"
-	test_data "github.com/advancemg/go-convert/test-data"
+	"github.com/advancemg/go-convert/test-data"
 	"github.com/ajankovic/xdiff"
 	"github.com/ajankovic/xdiff/parser"
 	"io/ioutil"
@@ -26,7 +26,7 @@ func TestJsonToXml(t *testing.T) {
 		"./test-data/xml/ChangeMPlanFilmPlannedInventoryI.xml",
 		"./test-data/xml/GetMPLansI.xml",
 	}
-	json := []string{
+	jsonItems := []string{
 		test_data.JsGetAdvMessagesI,
 		test_data.JsGetBudgetsI,
 		test_data.JsGetChannelsI,
@@ -42,7 +42,7 @@ func TestJsonToXml(t *testing.T) {
 		test_data.JsChangeMPlanFilmPlannedInventoryI,
 		test_data.JsGetMPLansI,
 	}
-	for i, v := range json {
+	for i, v := range jsonItems {
 		toXml, err := JsonToXml([]byte(v))
 		if err != nil {
 			t.Errorf("JsonToXml() error = %v, wantErr %v", err, false)

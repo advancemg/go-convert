@@ -17,7 +17,10 @@ type xmlNode struct {
 // Output []byte and error.
 func XmlToJson(input []byte) ([]byte, error) {
 	n := &xmlNode{}
-	xml.Unmarshal(input, n)
+	err := xml.Unmarshal(input, n)
+	if err != nil {
+		return nil, err
+	}
 	return n.marshalJson()
 }
 

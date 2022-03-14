@@ -46,7 +46,7 @@ func TestFileXmlToJson(t *testing.T) {
 		"./test-data/xml/GetProgramBreaksLight.xml",
 		"./test-data/xml/GetProgramBreaksO.xml",
 	}
-	json := []string{
+	jsonItems := []string{
 		test_data.JsGetAdvMessagesI,
 		test_data.JsGetAdvMessagesO,
 		test_data.JsGetBudgetsI,
@@ -91,7 +91,7 @@ func TestFileXmlToJson(t *testing.T) {
 			t.Errorf("FileXmlToJson() error = %v, wantErr %v", err, false)
 			return
 		}
-		js2 := json[i]
+		js2 := jsonItems[i]
 		if js2 != "" {
 			got, err := jsonBytesEqual(js, []byte(js2))
 			if err != nil {

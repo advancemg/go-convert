@@ -43,7 +43,7 @@ func addField(key string, value interface{}) map[string]interface{} {
 	result := make(map[string]interface{})
 	attrKey := key
 	if arr, ok := value.([]interface{}); ok {
-		tmpArr := []interface{}{}
+		var tmpArr []interface{}
 		for _, vv := range arr {
 			if mp, ok := vv.(map[string]interface{}); ok {
 				for k, v := range mp {
@@ -59,7 +59,7 @@ func addField(key string, value interface{}) map[string]interface{} {
 	if v, ok := value.(map[string]interface{}); ok {
 		for k, val := range v {
 			if arr, ok := val.([]interface{}); ok {
-				tmpArr := []interface{}{}
+				var tmpArr []interface{}
 				for _, vv := range arr {
 					if mp, ok := vv.(map[string]interface{}); ok {
 						for keyL1, v := range mp {

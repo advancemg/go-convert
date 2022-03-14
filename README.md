@@ -1,4 +1,4 @@
-Go package that converts XML to JSON
+Go package that converts
 
 ### Install
 
@@ -191,6 +191,3 @@ JsonToXml
 
 ### Contributing
 Feel free to contribute to this project if you want to fix/extend/improve it.
-
-## Licence
-[MIT](https://opensource.org/licenses/MIT)
