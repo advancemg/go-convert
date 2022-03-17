@@ -2,71 +2,72 @@ package go_convert
 
 import (
 	"bytes"
-	"github.com/advancemg/go-convert/test-data"
 	"github.com/ajankovic/xdiff"
 	"github.com/ajankovic/xdiff/parser"
-	"io/ioutil"
+	"reflect"
 	"testing"
 )
 
 func TestJsonToXml(t *testing.T) {
-	xml := []string{
-		"./test-data/xml/GetAdvMessagesI.xml",
-		"./test-data/xml/GetBudgetsI.xml",
-		"./test-data/xml/GetChannelsI.xml",
-		"./test-data/xml/GetCustomersWithAdvertisersI.xml",
-		"./test-data/xml/GetDeletedSpotInfoI.xml",
-		"./test-data/xml/GetRanksI.xml",
-		"./test-data/xml/GetSpotsI.xml",
-		"./test-data/xml/DeleteSpotI.xml",
-		"./test-data/xml/ChangeSpotI.xml",
-		"./test-data/xml/SetSpotPositionI.xml",
-		"./test-data/xml/ChangeFilmsI.xml",
-		"./test-data/xml/DeleteMPlanFilmI.xml",
-		"./test-data/xml/ChangeMPlanFilmPlannedInventoryI.xml",
-		"./test-data/xml/GetMPLansI.xml",
+	type args struct {
+		input []byte
 	}
-	jsonItems := []string{
-		test_data.JsGetAdvMessagesI,
-		test_data.JsGetBudgetsI,
-		test_data.JsGetChannelsI,
-		test_data.JsGetCustomersWithAdvertisersI,
-		test_data.JsGetDeletedSpotInfoI,
-		test_data.JsGetRanksI,
-		test_data.JsGetSpotsI,
-		test_data.JsDeleteSpotI,
-		test_data.JsChangeSpotI,
-		test_data.JsSetSpotPositionI,
-		test_data.JsChangeFilmsI,
-		test_data.JsDeleteMPlanFilmI,
-		test_data.JsChangeMPlanFilmPlannedInventoryI,
-		test_data.JsGetMPLansI,
+	tests := []struct {
+		name    string
+		args    args
+		want    []byte
+		wantErr bool
+	}{
+		{
+			name: "json to xml",
+			args: args{
+				input: []byte(`{"attributes": {"xmlns:xsi": "\"http://www.w3.org/2001/XMLSchema-instance\""}, "GetAdvMessages": {"CreationDateEnd": "2019-03-02", "CreationDateStart": "2019-03-01","Advertisers": {"ID": "1" }, "AdvertisingMessageIDs": [{"ID": "1"}, {"ID": "2"}], "Aspects": {"ID": "2" }, "FillMaterialTags": "true"}}`),
+			},
+			want:    []byte(`<GetAdvMessages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><CreationDateEnd>2019-03-02</CreationDateEnd><CreationDateStart>2019-03-01</CreationDateStart><Advertisers><ID>1</ID></Advertisers><AdvertisingMessageIDs><ID>1</ID><ID>2</ID></AdvertisingMessageIDs><Aspects><ID>2</ID></Aspects><FillMaterialTags>true</FillMaterialTags></GetAdvMessages>`),
+			wantErr: false,
+		},
+		{
+			name: "json to xml",
+			args: args{
+				input: []byte(`{"GetBudgets": {"AdvertiserList": {"ID": "700064621"},"ChannelList": {"ID": "1018574"},"EndMonth": "20180115","SellingDirectionID": "21","StartMonth": "201801"}}`),
+			},
+			want:    []byte(`<GetBudgets><AdvertiserList><ID>700064621</ID></AdvertiserList><ChannelList><ID>1018574</ID></ChannelList><EndMonth>20180115</EndMonth><SellingDirectionID>21</SellingDirectionID><StartMonth>201801</StartMonth></GetBudgets>`),
+			wantErr: false,
+		},
+		{
+			name: "json to xml",
+			args: args{
+				input: []byte(`{"GetChannels": {"SellingDirectionID": "21"}}`),
+			},
+			want:    []byte(`<GetChannels><SellingDirectionID>21</SellingDirectionID></GetChannels>`),
+			wantErr: false,
+		},
+		{
+			name: "json to xml",
+			args: args{
+				input: []byte(`{"attributes": {"xmlns:xsi": "\"http://www.w3.org/2001/XMLSchema-instance\""}, "AddSpot": {"BlockID": "1","FilmID": "1","Position": "nil","FixedPosition": "true","AuctionBidValue": "nil"}}`),
+			},
+			want:    []byte(`<AddSpot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><BlockID>1</BlockID><FilmID>1</FilmID><Position xsi:nil="true"></Position><FixedPosition>true</FixedPosition><AuctionBidValue xsi:nil="true"></AuctionBidValue></AddSpot>`),
+			wantErr: false,
+		},
 	}
-	for i, v := range jsonItems {
-		toXml, err := JsonToXml([]byte(v))
-		if err != nil {
-			t.Errorf("JsonToXml() error = %v, wantErr %v", err, false)
-			return
-		}
-		baseXml, err := ioutil.ReadFile(xml[i])
-		if err != nil {
-			t.Errorf("ReadFile() error = %v", err)
-			return
-		}
-		got, err := xmlDiff(toXml, baseXml)
-		if err != nil {
-			t.Errorf("JsonToXml() error = %v, wantErr %v", err, false)
-			return
-		}
-		if got != true {
-			t.Errorf("JsonToXml() got = %v, want %v", got, true)
-		}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got, err := JsonToXml(tt.args.input)
+			if (err != nil) != tt.wantErr {
+				t.Errorf("JsonToXml() error = %v, wantErr %v", err, tt.wantErr)
+				return
+			}
+			if !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("JsonToXml() got = %v, want %v", got, tt.want)
+			}
+		})
 	}
 }
 
 func BenchmarkJsonToXml(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		_, err := JsonToXml([]byte(test_data.JsGetAdvMessagesI))
+		_, err := JsonToXml([]byte(`{"attributes": {"xmlns:xsi": "\"http://www.w3.org/2001/XMLSchema-instance\""}, "GetAdvMessages": {"CreationDateEnd": "2019-03-02", "CreationDateStart": "2019-03-01","Advertisers": {"ID": "1" }, "AdvertisingMessageIDs": [{"ID": "1"}, {"ID": "2"}], "Aspects": {"ID": "2" }, "FillMaterialTags": "true"}}`))
 		if err != nil {
 			panic(err)
 		}

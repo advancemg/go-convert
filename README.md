@@ -116,7 +116,7 @@ func main() {
       }
     ],
     "attributes": {
-      "xsi": "http://www.w3.org/2001/XMLSchema-instance"
+      "xmlns:xsi": "\"http://www.w3.org/2001/XMLSchema-instance\""
     }
   }
 }
@@ -145,7 +145,7 @@ func main() {
     "CreationDateStart": "2019-03-01",
     "FillMaterialTags": "true",
     "attributes": {
-      "xsi": "http://www.w3.org/2001/XMLSchema-instance"
+      "xmlns:xsi": "\"http://www.w3.org/2001/XMLSchema-instance\""
     }
   }
 }
@@ -181,13 +181,13 @@ XmlToJson
 
 | Op    | ns/op | B/op  | allocs/op |
 |-------|-------|-------|-----------|
-| 21218 | 54522 | 41222 | 581       |
+| 17607 | 67120 | 41216 | 581       |
 
 JsonToXml
 
 | Op    | ns/op | B/op  | allocs/op |
 |-------|-------|-------|-----------|
-| 68661 | 15192 | 18615 | 226       |
+| 43179 | 33029 | 15231 | 372       |
 
 ### Contributing
 Feel free to contribute to this project if you want to fix/extend/improve it.
