@@ -73,11 +73,11 @@ func (n *xmlNode) xmlToMap() map[string]interface{} {
 	if len(n.Attrs) > 0 {
 		for _, v := range n.Attrs {
 			if v.Name.Local == "xsi" {
-				fields["attributes"] = map[string]interface{}{"xsi": v.Value}
+				fields[attributesKey] = map[string]interface{}{"xsi": v.Value}
 			}
 			if v.Name.Local != "nil" {
 				attrFields[v.Name.Local] = v.Value
-				fields["attributes"] = attrFields
+				fields[attributesKey] = attrFields
 			}
 		}
 		isAttributes = true
@@ -87,7 +87,7 @@ func (n *xmlNode) xmlToMap() map[string]interface{} {
 	} else {
 		if len(n.Attrs) > 0 && len(n.Nodes) == 0 {
 			if len(n.Content) > 0 {
-				addFields("_content", n.Content)
+				addFields(contentKey, n.Content)
 			}
 			result[n.XMLName.Local] = fields
 		} else {

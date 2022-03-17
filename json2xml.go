@@ -1,6 +1,8 @@
 package go_convert
 
 import (
+	"bytes"
+	"encoding/json"
 	"fmt"
 	"github.com/clbanning/mxj/v2/j2x"
 	"strings"
@@ -9,9 +11,25 @@ import (
 // JsonToXml covert json to xml.
 // Output []byte and error.
 func JsonToXml(input []byte) ([]byte, error) {
+	var inputMap UnsortedMap
+	err := json.Unmarshal(input, &inputMap)
+	if err != nil {
+		return nil, err
+	}
+	return inputMap.ToXml()
+}
+
+func JsonToXml1(input []byte) ([]byte, error) {
+	/*	var json = jsoniter.Config{
+		EscapeHTML:             true,
+		SortMapKeys:            false,
+		ValidateJsonRawMessage: false,
+	}.Froze()*/
 	tmpMap := make(map[string]interface{})
 	resultMap := make(map[string]interface{})
-	inputMap, err := j2x.JsonToMap(input)
+	/*inputMap, err := j2x.JsonToMap(input)*/
+	var inputMap map[string]interface{}
+	err := json.Unmarshal(input, &inputMap)
 	if err != nil {
 		return nil, err
 	}
@@ -25,11 +43,38 @@ func JsonToXml(input []byte) ([]byte, error) {
 		attrKey = key
 		resultMap[rootKey] = value
 	}
-	json, err := j2x.MapToJson(resultMap)
+	xmlBuilder := strings.Builder{}
+	for k, v := range resultMap {
+
+		xmlBuilder.WriteString(fmt.Sprintf("<%s>%s</%s>", k, v, k))
+	}
+	//json, err := j2x.MapToJson(resultMap)
+	jsonData, err := json.Marshal(resultMap)
 	if err != nil {
 		return nil, err
 	}
-	xml, err := j2x.JsonToXml(json)
+	/*json reader*/
+	// empty or nil begets empty
+	if len(jsonData) == 0 {
+		return nil, err
+	}
+	if jsonData[0] == '[' {
+		jsonData = []byte(`{"object":` + string(jsonData) + `}`)
+	}
+	m := make(map[string]interface{})
+	// err := json.Unmarshal(jsonVal, &m)
+	buf := bytes.NewReader(jsonData)
+	dec := json.NewDecoder(buf)
+
+	err = dec.Decode(&m)
+	toMap, err := j2x.JsonToMap(jsonData)
+	if err != nil {
+		return nil, err
+	}
+	for k, v := range toMap {
+		println(k, v)
+	}
+	xml, err := j2x.JsonToXml(jsonData)
 	if err != nil {
 		return nil, err
 	}
