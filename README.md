@@ -41,7 +41,8 @@ func main() {
 **Input**
 
 ```xml
-  <responseProgramBreaksV2Light xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<responseProgramBreaksV2Light xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <BreakList>
         <b BlockID="117952183" HasAucSpots="false" VM="180" VR="0">
             <Booked RankID="2" VM="175" VR="0"/>
@@ -154,6 +155,7 @@ func main() {
 **Output**
 
 ```xml
+
 <GetAdvMessages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Advertisers>
         <ID>1</ID>
@@ -177,6 +179,7 @@ func main() {
 ```shell
 go test -bench=. -benchmem
 ```
+
 XmlToJson
 
 | Op    | ns/op | B/op  | allocs/op |
@@ -189,5 +192,12 @@ JsonToXml
 |-------|-------|-------|-----------|
 | 43179 | 33029 | 15231 | 372       |
 
+## Test
+
+```shell
+go test -v
+```
+
 ### Contributing
+
 Feel free to contribute to this project if you want to fix/extend/improve it.
