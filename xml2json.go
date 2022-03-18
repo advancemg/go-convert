@@ -1,8 +1,12 @@
 package go_convert
 
 import (
+	"bytes"
+	"compress/gzip"
 	"encoding/json"
 	"encoding/xml"
+	"fmt"
+	"io"
 	"io/ioutil"
 )
 
@@ -11,6 +15,24 @@ type xmlNode struct {
 	Content string     `xml:",innerxml"`
 	Nodes   []*xmlNode `xml:",any"`
 	Attrs   []xml.Attr `xml:",any,attr"`
+}
+
+// ZipXmlToJson covert xmt to json.
+// Input gzip []byte.
+// Output []byte and error.
+func ZipXmlToJson(input []byte) ([]byte, error) {
+	in := bytes.NewReader(input)
+	reader, err := gzip.NewReader(in)
+	if err != nil {
+		return nil, fmt.Errorf("not correct zip data, %v", err)
+	}
+	defer reader.Close()
+	unZipBuffer := new(bytes.Buffer)
+	_, err = io.Copy(unZipBuffer, reader)
+	if err != nil {
+		return nil, fmt.Errorf("not copy unzip data, %v", err)
+	}
+	return XmlToJson(unZipBuffer.Bytes())
 }
 
 // XmlToJson covert xmt to json.

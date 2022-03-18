@@ -1,6 +1,7 @@
 package go_convert
 
 import (
+	"encoding/base64"
 	"encoding/json"
 	"github.com/advancemg/go-convert/test-data"
 	"reflect"
@@ -123,4 +124,33 @@ func jsonBytesEqual(a, b []byte) (bool, error) {
 		return false, err
 	}
 	return reflect.DeepEqual(j2, j), nil
+}
+
+func TestZipXmlToJson(t *testing.T) {
+	decodeBytes, _ := base64.StdEncoding.DecodeString(`H4sIAAAAAAAA/7SRQUrEMBSGr5IbvBfpjBUe2TQgWehGcZ8ZAx2IaWl6geIJ3IqLHkEEQQr2DK83Eq22togr3eV9P/z8H6HKxbII0Z26OsttCM5HRZ8vRUYriTJNjrcERiu6yIuqPrc3TnHLd3wv+IH7oeGOn/iRYI7JRH2IdufdtUKCbxed2UPI8uDHZkSCidA++MyFurLeaJUc4ZZggWi3L+crlQQL8B6P6xazvijBJLY23MhkbXh5JSQiCm6H26H5aOv5WXDHL/zK/R+on/yivkn/Sx1++vK3AAAA//+RE7FMCAIAAA==`)
+	tests := []struct {
+		name    string
+		field   []byte
+		want    []byte
+		wantErr bool
+	}{
+		{
+			name:    "read gzip Xml data to Json",
+			field:   decodeBytes,
+			want:    []byte(`{"responseGetChannels":[{"Channel":{"ID":"1018476","IsDisabled":"0","MainChnl":"1018400","ShortName":"РБК Москва","bcpCentralID":"81","bcpName":"Москва","cnlCentralID":"4206"}},{"Channel":{"ID":"1018514","IsDisabled":"0","MainChnl":"1018409","ShortName":"TV 1000 Русское кино Москва","bcpCentralID":"81","bcpName":"Москва","cnlCentralID":"4258"}}]}`),
+			wantErr: false,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got, err := ZipXmlToJson(tt.field)
+			if (err != nil) != tt.wantErr {
+				t.Errorf("ZipXmlToJson() error = %v, wantErr %v", err, tt.wantErr)
+				return
+			}
+			if !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("ZipXmlToJson() got = %v, want %v", got, tt.want)
+			}
+		})
+	}
 }
