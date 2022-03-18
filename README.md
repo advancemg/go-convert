@@ -1,5 +1,12 @@
 Go package that converts
 
+![Platform](https://img.shields.io/badge/platform-win%20%7C%20mac%20%7C%20linux-blue)
+
+[![GoDoc](https://godoc.org/github.com/advancemg/go-convert?status.svg)](https://godoc.org/github.com/advancemg/go-convert)
+[![Go Report Card](https://goreportcard.com/badge/github.com/advancemg/go-convert)](https://goreportcard.com/report/github.com/advancemg/go-convert)
+[![License](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](LICENSE)
+[![Release](https://img.shields.io/github/release/advancemg/go-convert.svg?style=flat-square)](https://github.com/advancemg/go-convert/releases)
+
 ### Install
 
     go get -u github.com/advancemg/go-convert
